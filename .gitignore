@@ -1,0 +1,10 @@
+node_modules/
+certs/privatekey.pem
+certs/certrequest.csr
+certs/certificate.pem
+curl/
+.env
+package-lock.json
+yarn.lock
+yarn-error.log
+mongo_session

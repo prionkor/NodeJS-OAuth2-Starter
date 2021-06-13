@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title><%= process.env.COMPANY %></title>
+	<!-- Needed for mobile sites to work -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Style sheets -->
+	<link rel="stylesheet" type="text/css" href="../stylesheets/index-modules.css">
+</head>
+
+<body>
+	<div id="main">
+		<img height="400" src="../images/lock.png">
+		<h1>Auth Server</h1>
+		<p>Powered by <a href="https://<%= process.env.DOMAIN %>"><%= process.env.COMPANY %></a></p>
+	</div>
+</body>
+
+</html>

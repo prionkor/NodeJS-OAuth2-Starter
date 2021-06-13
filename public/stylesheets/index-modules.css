@@ -1,0 +1,29 @@
+/**
+ * Using some off white for the background color and
+ * padding the top.
+ */
+body {
+  color: white;
+  text-align: center;
+  background: rgb(67,67,69,1);
+  background: radial-gradient(circle, rgba(98,99,113,1) 0%, rgba(67,67,69,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/**
+ * Make links the same again,
+ */
+a {
+  font-size: 100%;
+  color: white;
+}
+img{
+  display: block;
+}
+p{
+  font-size: 12px;
+}

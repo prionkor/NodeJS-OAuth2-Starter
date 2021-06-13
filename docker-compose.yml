@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  nodejs-oauth2-mysql:
+    container_name: nodejs-oauth2-mysql
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=auth
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=pass
+    volumes:
+      - ./data:/var/lib/mysql
+  nodejs-oauth2:
+    container_name: nodejs-oauth2
+    restart: on-failure
+    environment:
+      - DB_USER=mysql
+      - DB_PASS=pass
+      - DB_NAME=auth
+      - DB_HOST=nodejs-oauth2-mysql
+      - DOMAIN=example.com
+      - COMPANY=Company Name
+      - API_SERVER=
+      - API_KEY=
+      - SESSION_SECRET=sfas42o3ij9jfs98afsdf9a8jf9s8djf2l3
+      - COOKIE_SECRET=sfas42o3ij9jfs98afsdf9a8jf9s8djf2l3
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3001:3000'
+    depends_on:
+      - nodejs-oauth2-mysql
+    volumes:
+      - /app/node_modules
+      - .:/app

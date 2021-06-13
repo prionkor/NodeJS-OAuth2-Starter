@@ -1,0 +1,16 @@
+node_modules
+mongo_session
+.env
+.git
+.cache
+.DS_Store
+phpcs.xml
+phpunit.xml
+Thumbs.db
+*.sql
+*.tar.gz
+*.zip
+yarn.lock
+*.log
+dist
+docker-compose.yml
